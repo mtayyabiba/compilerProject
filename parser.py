@@ -28,16 +28,14 @@ lg.add("DOUBlEQUOT", r"\"")
 lg.add("SEMICOLON", r"\;")
 lg.add("EQUAL", r"\=")
 lg.add("PLUS", r"\+")
-
 lg.add("MINUS", r"\-")
 lg.add("MULT", r"\*")
 lg.add("DIVIDE", r"\\")
+lg.add("ident", r"[a-z][\w]*")
+
 
 lg.ignore(r"\s+")
 
 
 lexer = lg.build()
-#parser = pg.build()
-
-
-print(lexer.lex(";").next().gettokentype())
+print(lexer.lex("abc").next().gettokentype())
