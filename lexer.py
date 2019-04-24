@@ -64,5 +64,5 @@ class Lexer():
         return self.lg.build()
 
 lexer = Lexer().get_lexer()
-for token in lexer.lex('abccc'):
+for token in lexer.lex('abccc\nasdas()=+-dsa whole frac loop endnow 3.2 3'):
     print(token)
